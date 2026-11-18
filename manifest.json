@@ -8,3 +8,10 @@
   "background_color": "#102F2D",
   "theme_color": "#244638"
 }
+"icons": [
+  {
+    "src": "KakaoTalk_20261118_144606368.jpg",
+    "sizes": "192x192 512x512",
+    "type": "image/jpeg"
+  }
+]
