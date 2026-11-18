@@ -142,21 +142,28 @@ header h1 {
 
 /* CARDS */
 
+
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
   gap: 24px;
 }
 
 .work-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  width: 100%;
+  min-width: 0;
   text-decoration: none;
   color: inherit;
-  background: var(--paper);
-  border: 1px solid #D8DDD1;
+  background: rgba(13, 39, 33, 0.94);
+  border: 1px solid #B08A45;
   padding: 12px;
   transition: transform .25s, box-shadow .25s;
 }
+
 
 .work-card:hover {
   transform: translateY(-5px);
