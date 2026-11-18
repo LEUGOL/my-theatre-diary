@@ -430,17 +430,23 @@ body {
 /* 모바일에서도 카드 2개씩 배치 */
 @media (max-width: 600px) {
 
+  
   .cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
     gap: 10px;
     width: 100%;
   }
 
   .work-card {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
     width: 100%;
     min-width: 0;
   }
+
 
   .cover {
     width: 100%;
