@@ -161,75 +161,31 @@ header h1 {
 
 /* COVER */
 
+
 .cover {
-  min-height: 260px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 25px 15px;
-  border: 1px solid rgba(255,255,255,.18);
+  padding: 0;
+  border: 1px solid #B08A45;
+  background: #19392E;
 }
 
-.human-cover {
-  background:
-    radial-gradient(ellipse at 50% 110%, #64786B 0%, transparent 55%),
-    linear-gradient(145deg, #304D3F, #192F28);
-  color: #F1EBDD;
-}
-
-.goldmund-cover {
-  background:
-    radial-gradient(ellipse at 50% 100%, #8B9C72 0%, transparent 55%),
-    linear-gradient(145deg, #526C50, #263F35);
-  color: #F4EEDB;
+.cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .cover::before {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(215, 197, 151, .55);
+  inset: 10px;
+  border: 1px solid rgba(215,197,151,.7);
   pointer-events: none;
-}
-
-.cover-ornament {
-  color: #D1B982;
-  font-size: 27px;
-  margin-bottom: 13px;
-}
-
-.cover-small {
-  font-family: Georgia, serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  opacity: .85;
-}
-
-.cover h3 {
-  font-family: Georgia, "Batang", serif;
-  font-size: clamp(19px, 3vw, 26px);
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 1.35;
-  margin: 15px 0 8px;
-}
-
-.cover-korean {
-  font-size: 14px;
-  letter-spacing: 4px;
-}
-
-.cover-bottom {
-  position: absolute;
-  bottom: 28px;
-  font-family: Georgia, serif;
-  font-size: 9px;
-  letter-spacing: 3px;
-  color: #D8CBA9;
+  z-index: 1;
 }
 
 /* CARD INFO */
