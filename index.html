@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#244638">
+<title>나의 관극 일기 | MY THEATRE ARCHIVE</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #244638;
+  --deep: #19392E;
+  --sage: #A9BBA7;
+  --light: #E8EEE5;
+  --paper: #F7F5EC;
+  --gold: #AD9560;
+  --text: #30483B;
+  --muted: #78877A;
+}
+
+body {
+  margin: 0;
+  background: var(--light);
+  color: var(--text);
+  font-family: "Noto Serif KR", "Batang", serif;
+  line-height: 1.7;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 35px 24px 65px;
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  overflow: hidden;
+  background: var(--green);
+  color: var(--paper);
+  padding: 65px 35px 58px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.header-label {
+  color: #C8B88E;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 17px;
+}
+
+header h1 {
+  font-size: clamp(30px, 5vw, 45px);
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.header-sub {
+  color: #D1D9CC;
+  font-family: Georgia, serif;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-top: 10px;
+}
+
+.header-line {
+  width: 55px;
+  height: 1px;
+  background: var(--gold);
+  margin: 24px auto;
+}
+
+.header-message {
+  color: #E1E5D9;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.header-decoration {
+  position: absolute;
+  color: #A8B89D;
+  opacity: .25;
+  font-size: 95px;
+  line-height: 1;
+}
+
+.deco-left {
+  left: 25px;
+  bottom: 12px;
+}
+
+.deco-right {
+  right: 25px;
+  top: 12px;
+}
+
+/* SECTION */
+
+.collection {
+  padding: 48px 4px 20px;
+}
+
+.section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid #C9D2C5;
+  padding-bottom: 15px;
+  margin-bottom: 27px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.section-caption {
+  font-family: Georgia, serif;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.collection-count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.work-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--paper);
+  border: 1px solid #D8DDD1;
+  padding: 12px;
+  transition: transform .25s, box-shadow .25s;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(34, 62, 46, .12);
+}
+
+/* COVER */
+
+.cover {
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px 15px;
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.human-cover {
+  background:
+    radial-gradient(ellipse at 50% 110%, #64786B 0%, transparent 55%),
+    linear-gradient(145deg, #304D3F, #192F28);
+  color: #F1EBDD;
+}
+
+.goldmund-cover {
+  background:
+    radial-gradient(ellipse at 50% 100%, #8B9C72 0%, transparent 55%),
+    linear-gradient(145deg, #526C50, #263F35);
+  color: #F4EEDB;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(215, 197, 151, .55);
+  pointer-events: none;
+}
+
+.cover-ornament {
+  color: #D1B982;
+  font-size: 27px;
+  margin-bottom: 13px;
+}
+
+.cover-small {
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: .85;
+}
+
+.cover h3 {
+  font-family: Georgia, "Batang", serif;
+  font-size: clamp(19px, 3vw, 26px);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.35;
+  margin: 15px 0 8px;
+}
+
+.cover-korean {
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.cover-bottom {
+  position: absolute;
+  bottom: 28px;
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #D8CBA9;
+}
+
+/* CARD INFO */
+
+.card-info {
+  padding: 18px 12px 13px;
+}
+
+.card-number {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 5px 0 2px;
+}
+
+.card-english {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+}
+
+.card-description {
+  font-size: 12px;
+  color: #748176;
+  margin-top: 12px;
+}
+
+.card-link {
+  display: inline-block;
+  border-bottom: 1px solid var(--gold);
+  color: var(--green);
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin-top: 13px;
+  padding-bottom: 3px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 42px 10px 10px;
+  color: #829083;
+}
+
+.footer-symbol {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+footer p {
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.footer-korean {
+  font-family: inherit;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .page {
+    padding: 15px 12px 40px;
+  }
+
+  header {
+    padding: 52px 15px 45px;
+  }
+
+  header h1 {
+    letter-spacing: 2px;
+  }
+
+  .header-decoration {
+    font-size: 65px;
+  }
+
+  .deco-left {
+    left: 10px;
+  }
+
+  .deco-right {
+    right: 10px;
+  }
+
+  .collection {
+    padding-top: 35px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .cover {
+    min-height: 185px;
+    padding: 17px 8px;
+  }
+
+  .cover::before {
+    inset: 8px;
+  }
+
+  .cover h3 {
+    font-size: 16px;
+  }
+
+  .cover-korean {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .cover-ornament {
+    font-size: 21px;
+  }
+
+  .cover-small {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .cover-bottom {
+    bottom: 18px;
+    font-size: 7px;
+  }
+
+  .card-info {
+    padding: 13px 7px 10px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-english {
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+
+  .card-description {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .card-link {
+    font-size: 10px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-caption {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+  <div class="header-decoration deco-left">❧</div>
+  <div class="header-decoration deco-right">❦</div>
+
+  <div class="header-label">MY PERSONAL COLLECTION</div>
+
+  <h1>나의 관극 일기</h1>
+
+  <div class="header-sub">
+    MY THEATRE ARCHIVE
+  </div>
+
+  <div class="header-line"></div>
+
+  <div class="header-message">
+    무대 위의 순간, 오래도록 간직하고 싶은 기록
+  </div>
+</header>
+
+<section class="collection">
+
+  <div class="section-top">
+    <div>
+      <h2 class="section-title">나의 공연 컬렉션</h2>
+      <div class="section-caption">
+        MY THEATRE COLLECTION
+      </div>
+    </div>
+
+    <div class="collection-count">
+      TOTAL · 02
+    </div>
+  </div>
+
+  <div class="cards">
+
+    <!-- 인간실격 -->
+
+    <a class="work-card"
+       href="https://leugol.github.io/NoLongerHuman/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="cover human-cover">
+        <div class="cover-small">
+          A THEATRE ARCHIVE
+        </div>
+
+        <div class="cover-ornament">❦</div>
+
+        <h3>NO LONGER<br>HUMAN</h3>
+
+        <div class="cover-korean">
+          인간실격
+        </div>
+
+        <div class="cover-bottom">
+          MY STAGE RECORD
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 001</div>
+
+        <div class="card-title">인간실격</div>
+
+        <div class="card-english">
+          NO LONGER HUMAN
+        </div>
+
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+
+        <span class="card-link">
+          VIEW ARCHIVE →
+        </span>
+      </div>
+    </a>
+
+    <!-- 나르치스와 골드문트 -->
+
+    <a class="work-card"
+       href="https://leugol.github.io/narcissus-and-goldmund/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="cover goldmund-cover">
+        <div class="cover-small">
+          A THEATRE ARCHIVE
+        </div>
+
+        <div class="cover-ornament">✿</div>
+
+        <h3>NARCISSUS<br>&amp; GOLDMUND</h3>
+
+        <div class="cover-korean">
+          나르치스와 골드문트
+        </div>
+
+        <div class="cover-bottom">
+          MY STAGE RECORD
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 002</div>
+
+        <div class="card-title">
+          나르치스와 골드문트
+        </div>
+
+        <div class="card-english">
+          NARCISSUS &amp; GOLDMUND
+        </div>
+
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+
+        <span class="card-link">
+          VIEW ARCHIVE →
+        </span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-symbol">❧</div>
+  <p>MY THEATRE · MY MEMORY · MY ARCHIVE</p>
+  <div class="footer-korean">
+    나의 무대, 나의 기억, 나의 기록
+  </div>
+</footer>
+
+</div>
+
+</body>
+</html>
