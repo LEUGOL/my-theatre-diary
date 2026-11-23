@@ -6,16 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#244638">
 <title>나의 관극 일기 | MY THEATRE ARCHIVE</title>
-  <link rel="manifest" href="manifest.json</a>">
-  <link rel="manifest" href="manifest.json">
+<link rel="manifest" href="manifest.json">
 
-<link rel="icon"
-      type="image/png"
-      href="archive-icon.png">
+<link rel="icon" type="image/png" href="archive-icon.png">
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="나의 관극 일기">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="나의 관극 일기">
@@ -49,7 +43,6 @@ body {
   margin: 0 auto;
   padding: 35px 24px 65px;
 }
-
 
 /* HEADER */
 
@@ -100,7 +93,6 @@ header h1 {
   letter-spacing: 1px;
 }
 
-
 /* SECTION */
 
 .collection {
@@ -137,7 +129,6 @@ header h1 {
 
 /* CARDS */
 
-
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -159,14 +150,12 @@ header h1 {
   transition: transform .25s, box-shadow .25s;
 }
 
-
 .work-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(34, 62, 46, .12);
 }
 
 /* COVER */
-
 
 .cover {
   aspect-ratio: 1 / 1;
@@ -277,8 +266,6 @@ footer p {
     letter-spacing: 2px;
   }
 
-
-
   .collection {
     padding-top: 35px;
   }
@@ -351,12 +338,13 @@ footer p {
     letter-spacing: 1px;
   }
 }
-  
+
 /* ==============================
    MY THEATRE ARCHIVE THEME
 ============================== */
 
 /* 전체 배경 */
+
 body {
   background-color: #102F2D;
   background-image: url("theatre-background.png");
@@ -368,6 +356,7 @@ body {
 }
 
 /* 공연 카드 */
+
 .work-card {
   background: rgba(13, 39, 33, 0.94);
   border: 1px solid #B08A45;
@@ -376,32 +365,38 @@ body {
 }
 
 /* 카드 안쪽 정보 영역 */
+
 .card-info {
   background: transparent;
 }
 
 /* 카드 제목 */
+
 .card-title {
   color: #E8DFC9;
 }
 
 /* 영문 제목과 컬렉션 번호 */
+
 .card-number,
 .card-english {
   color: #C5A56A;
 }
 
 /* 설명 */
+
 .card-description {
   color: #D2C8B3;
 }
 
 /* 아카이브 링크 */
+
 .card-link {
   color: #D5AD61;
 }
 
 /* 모바일 배경 */
+
 @media (max-width: 600px) {
   body {
     background-attachment: scroll;
@@ -411,11 +406,9 @@ body {
   }
 }
 
-
 /* 모바일에서도 카드 2개씩 배치 */
-@media (max-width: 600px) {
 
-  
+@media (max-width: 600px) {
   .cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -431,7 +424,6 @@ body {
     width: 100%;
     min-width: 0;
   }
-
 
   .cover {
     width: 100%;
@@ -480,8 +472,6 @@ body {
     letter-spacing: 1px;
   }
 }
-
-
 </style>
 </head>
 
@@ -490,7 +480,6 @@ body {
 <div class="page">
 
 <header>
-
   <div class="header-label">MY PERSONAL COLLECTION</div>
 
   <h1>나의 관극 일기</h1>
@@ -517,136 +506,183 @@ body {
     </div>
 
     <div class="collection-count">
-      TOTAL · 03
+      TOTAL · 05
     </div>
   </div>
 
- <div class="cards">
+  <div class="cards">
 
-  <!-- 나르치스와 골드문트 -->
+    <!-- 나르치스와 골드문트 -->
 
-<a class="work-card"
-   href="https://leugol.github.io/narcissus-and-goldmund/"
-   target="_blank"
-   rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://leugol.github.io/narcissus-and-goldmund/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-    <div class="cover goldmund-cover">
-      <img src="narcissus-poster.png" alt="나르치스와 골드문트 공연 포스터">
-    </div>
-
-    <div class="card-info">
-      <div class="card-number">COLLECTION · 004</div>
-      <div class="card-title">나르치스와 골드문트</div>
-      <div class="card-english">NARCISSUS &amp; GOLDMUND</div>
-      <div class="card-description">
-        공연과 배우, 좌석과 관람의 기록
+      <div class="cover goldmund-cover">
+        <img src="narcissus-poster.png" alt="나르치스와 골드문트 공연 포스터">
       </div>
-      <span class="card-link">VIEW ARCHIVE →</span>
-    </div>
 
-  </a>
-
-  <!-- 인간실격 -->
-
-  <a class="work-card"
-     href="https://leugol.github.io/NoLongerHuman/"
-     target="_blank"
-     rel="noopener noreferrer">
-
-    <div class="cover human-cover">
-      <img src="human-poster.png" alt="인간실격 공연 포스터">
-    </div>
-
-    <div class="card-info">
-      <div class="card-number">COLLECTION · 003</div>
-      <div class="card-title">인간실격</div>
-      <div class="card-english">NO LONGER HUMAN</div>
-      <div class="card-description">
-        공연과 배우, 좌석과 관람의 기록
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 005</div>
+        <div class="card-title">나르치스와 골드문트</div>
+        <div class="card-english">NARCISSUS &amp; GOLDMUND</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
       </div>
-      <span class="card-link">VIEW ARCHIVE →</span>
-    </div>
 
-  </a>
+    </a>
 
-  <!-- 브라더스 까라마조프 -->
+    <!-- 인간실격 -->
 
-  <a class="work-card"
-     href="https://leugol.github.io/brothers-karamazov/"
-     target="_blank"
-     rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://leugol.github.io/NoLongerHuman/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-   <div class="cover brothers-cover">
-  <img
-    src="https://leugol.github.io/brothers-karamazov/brothers_karamazov_icon.png"
-    alt="브라더스 까라마조프 아이콘">
-</div>
-
-    <div class="card-info">
-      <div class="card-number">COLLECTION · 002</div>
-      <div class="card-title">브라더스 까라마조프</div>
-      <div class="card-english">BROTHERS KARAMAZOV</div>
-      <div class="card-description">
-        공연과 배우, 좌석과 관람의 기록
+      <div class="cover human-cover">
+        <img src="human-poster.png" alt="인간실격 공연 포스터">
       </div>
-      <span class="card-link">VIEW ARCHIVE →</span>
-    </div>
 
-  </a>
-
-  <!-- 시데레우스 -->
-
-  <a class="work-card"
-     href="https://leugol.github.io/SIDEREUS/"
-     target="_blank"
-     rel="noopener noreferrer">
-
-    <div class="cover sidereus-cover">
-      <div style="
-        width:100%;
-        height:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        text-align:center;
-        color:#D8DFE8;
-        background:linear-gradient(145deg,#17243B,#263A56);
-        font-family:Georgia,serif;
-        letter-spacing:3px;
-      ">
-        <div style="font-size:11px;color:#A9B8CC;">
-          ASTRONOMICAL RECORD
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 004</div>
+        <div class="card-title">인간실격</div>
+        <div class="card-english">NO LONGER HUMAN</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
         </div>
-        <div style="font-size:30px;margin:18px 0;">
-          ✦
-        </div>
-        <div style="font-size:25px;">
-          SIDEREUS
-        </div>
-        <div style="font-size:10px;margin-top:12px;color:#A9B8CC;">
-          GALILEO GALILEI
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
+    <!-- 엠.버터플라이 -->
+
+    <a class="work-card"
+       href="https://musical-m-butterfly.vercel.app/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="cover butterfly-cover">
+        <div style="
+          width:100%;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          color:#E8DFC9;
+          background:linear-gradient(145deg,#30283A,#59465A,#241E30);
+          font-family:Georgia,serif;
+          letter-spacing:3px;
+        ">
+          <div style="font-size:11px;color:#D5B9C9;">
+            A STORY OF IDENTITY
+          </div>
+          <div style="font-size:30px;margin:18px 0;">
+            🦋
+          </div>
+          <div style="font-size:25px;">
+            M.
+          </div>
+          <div style="font-size:19px;margin-top:5px;">
+            BUTTERFLY
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="card-info">
-      <div class="card-number">COLLECTION · 001</div>
-      <div class="card-title">시데레우스</div>
-      <div class="card-english">SIDEREUS</div>
-      <div class="card-description">
-        공연과 배우, 좌석과 관람의 기록
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 003</div>
+        <div class="card-title">엠.버터플라이</div>
+        <div class="card-english">M. BUTTERFLY</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
       </div>
-      <span class="card-link">VIEW ARCHIVE →</span>
-    </div>
 
-  </a>
+    </a>
 
-</div>
+    <!-- 브라더스 까라마조프 -->
+
+    <a class="work-card"
+       href="https://leugol.github.io/brothers-karamazov/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="cover brothers-cover">
+        <img
+          src="https://leugol.github.io/brothers-karamazov/brothers_karamazov_icon.png"
+          alt="브라더스 까라마조프 아이콘">
+      </div>
+
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 002</div>
+        <div class="card-title">브라더스 까라마조프</div>
+        <div class="card-english">BROTHERS KARAMAZOV</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
+    <!-- 시데레우스 -->
+
+    <a class="work-card"
+       href="https://leugol.github.io/SIDEREUS/"
+       target="_blank"
+       rel="noopener noreferrer">
+
+      <div class="cover sidereus-cover">
+        <div style="
+          width:100%;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          color:#D8DFE8;
+          background:linear-gradient(145deg,#17243B,#263A56);
+          font-family:Georgia,serif;
+          letter-spacing:3px;
+        ">
+          <div style="font-size:11px;color:#A9B8CC;">
+            ASTRONOMICAL RECORD
+          </div>
+          <div style="font-size:30px;margin:18px 0;">
+            ✦
+          </div>
+          <div style="font-size:25px;">
+            SIDEREUS
+          </div>
+          <div style="font-size:10px;margin-top:12px;color:#A9B8CC;">
+            GALILEO GALILEI
+          </div>
+        </div>
+      </div>
+
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 001</div>
+        <div class="card-title">시데레우스</div>
+        <div class="card-english">SIDEREUS</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
+  </div>
 </section>
 
 <footer>
-
   <p>MY THEATRE · MY MEMORY · MY ARCHIVE</p>
   <div class="footer-korean">
     나의 무대, 나의 기억, 나의 기록
