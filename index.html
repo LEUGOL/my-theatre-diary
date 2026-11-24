@@ -209,6 +209,17 @@ header h1 {
   color: var(--muted);
 }
 
+/* 공연 기간 */
+
+.card-period {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .5px;
+  color: #D5AD61;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
 .card-description {
   font-size: 12px;
   color: #748176;
@@ -319,6 +330,12 @@ footer p {
     letter-spacing: .5px;
   }
 
+  .card-period {
+    font-size: 9px;
+    letter-spacing: 0;
+    margin-top: 8px;
+  }
+
   .card-description {
     font-size: 11px;
     line-height: 1.6;
@@ -380,6 +397,12 @@ body {
 .card-number,
 .card-english {
   color: #C5A56A;
+}
+
+/* 공연 기간 */
+
+.card-period {
+  color: #D5AD61;
 }
 
 /* 설명 */
@@ -460,6 +483,14 @@ body {
     overflow-wrap: anywhere;
   }
 
+  .card-period {
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin-top: 8px;
+    overflow-wrap: normal;
+  }
+
   .card-description {
     font-size: 10px;
     line-height: 1.6;
@@ -526,6 +557,7 @@ body {
         <div class="card-number">COLLECTION · 0012</div>
         <div class="card-title">나르치스와 골드문트</div>
         <div class="card-english">NARCISSUS &amp; GOLDMUND</div>
+        <div class="card-period">2026.12.22. ~ 2027.03.14.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -549,6 +581,7 @@ body {
         <div class="card-number">COLLECTION · 0011</div>
         <div class="card-title">인간실격</div>
         <div class="card-english">NO LONGER HUMAN</div>
+        <div class="card-period">2026.12.11. ~ 2027.03.07.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -564,16 +597,17 @@ body {
        target="_blank"
        rel="noopener noreferrer">
 
-     <div class="cover butterfly-cover">
-  <img
-    src="m_butterfly_icon.png"
-    alt="엠.버터플라이 아이콘">
-</div>
+      <div class="cover butterfly-cover">
+        <img
+          src="m_butterfly_icon.png"
+          alt="엠.버터플라이 아이콘">
+      </div>
 
       <div class="card-info">
         <div class="card-number">COLLECTION · 0010</div>
         <div class="card-title">엠.버터플라이</div>
         <div class="card-english">M. BUTTERFLY</div>
+        <div class="card-period">2026.09.22. ~ 2026.12.13.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -599,6 +633,7 @@ body {
         <div class="card-number">COLLECTION · 009</div>
         <div class="card-title">브라더스 까라마조프</div>
         <div class="card-english">BROTHERS KARAMAZOV</div>
+        <div class="card-period">2026.07.14. ~ 2026.09.06.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -614,15 +649,17 @@ body {
        target="_blank"
        rel="noopener noreferrer">
 
-    <div class="cover sidereus-cover">
-  <img
-    src="https://leugol.github.io/SIDEREUS/sidereus_icon.png"
-    alt="시데레우스 아이콘">
-</div>
+      <div class="cover sidereus-cover">
+        <img
+          src="https://leugol.github.io/SIDEREUS/sidereus_icon.png"
+          alt="시데레우스 아이콘">
+      </div>
+
       <div class="card-info">
         <div class="card-number">COLLECTION · 008</div>
         <div class="card-title">시데레우스</div>
         <div class="card-english">SIDEREUS</div>
+        <div class="card-period">2026.06.04. ~ 2026.08.30.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -639,15 +676,16 @@ body {
        rel="noopener noreferrer">
 
       <div class="cover diaghilev-cover">
-  <img
-    src="https://leugol.github.io/Diaghilev/diaghilev_icon.png"
-    alt="디아길레프 아이콘">
-</div>
+        <img
+          src="https://leugol.github.io/Diaghilev/diaghilev_icon.png"
+          alt="디아길레프 아이콘">
+      </div>
 
       <div class="card-info">
         <div class="card-number">COLLECTION · 007</div>
         <div class="card-title">디아길레프</div>
         <div class="card-english">DIAGHILEV</div>
+        <div class="card-period">2026.03.31. ~ 2026.06.14.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -655,6 +693,7 @@ body {
       </div>
 
     </a>
+
     <!-- 전설의 리틀 농구단 -->
 
     <a class="work-card"
@@ -672,6 +711,7 @@ body {
         <div class="card-number">COLLECTION · 006</div>
         <div class="card-title">전설의 리틀 농구단</div>
         <div class="card-english">LEGEND OF LITTLE BASKETBALL</div>
+        <div class="card-period">2026.03.10. ~ 2026.05.25.</div>
         <div class="card-description">
           공연과 배우, 좌석과 관람의 기록
         </div>
@@ -679,109 +719,127 @@ body {
       </div>
 
     </a>
+
+    <!-- 나르치스와 골드문트 25-26 -->
+
     <a class="work-card"
-   href="https://docs.google.com/spreadsheets/d/1Qg25kG2rMpg6gw9xwT9amR-XYpXdqeQbKlZQIzNQCZE/edit?gid=0#gid=0"
-   target="_blank"
-   rel="noopener noreferrer">
+       href="https://docs.google.com/spreadsheets/d/1Qg25kG2rMpg6gw9xwT9amR-XYpXdqeQbKlZQIzNQCZE/edit?gid=0#gid=0"
+       target="_blank"
+       rel="noopener noreferrer">
 
-  <div class="cover goldmund-cover">
-    <img src="narcissus-2526-poster.png" alt="나르치스와 골드문트 25-26 공연 포스터">
-  </div>
+      <div class="cover goldmund-cover">
+        <img src="narcissus-2526-poster.png" alt="나르치스와 골드문트 25-26 공연 포스터">
+      </div>
 
-  <div class="card-info">
-    <div class="card-number">COLLECTION · 005</div>
-    <div class="card-title">나르치스와 골드문트 (25-26)</div>
-    <div class="card-english">NARCISSUS &amp; GOLDMUND · 25-26</div>
-    <div class="card-description">
-      공연과 배우, 좌석과 관람의 기록
-    </div>
-    <span class="card-link">VIEW ARCHIVE →</span>
-  </div>
-</a>
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 005</div>
+        <div class="card-title">나르치스와 골드문트 (25-26)</div>
+        <div class="card-english">NARCISSUS &amp; GOLDMUND · 25-26</div>
+        <div class="card-period">2025.12.23. ~ 2026.03.22.</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
     <!-- 프라테르니테 -->
 
-<a class="work-card"
-   href="https://docs.google.com/spreadsheets/d/1y0Fwc3Wp6KcNh88dh9mTaY3b-48bTNJecJm3A6Cd1tU/edit"
-   target="_blank"
-   rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://docs.google.com/spreadsheets/d/1y0Fwc3Wp6KcNh88dh9mTaY3b-48bTNJecJm3A6Cd1tU/edit"
+       target="_blank"
+       rel="noopener noreferrer">
 
-  <div class="cover fraternite-cover">
-    <img src="fraternite-poster.jpg" alt="프라테르니테 공연 포스터">
-  </div>
+      <div class="cover fraternite-cover">
+        <img src="fraternite-poster.jpg" alt="프라테르니테 공연 포스터">
+      </div>
 
-  <div class="card-info">
-    <div class="card-number">COLLECTION · 004</div>
-    <div class="card-title">프라테르니테</div>
-    <div class="card-english">FRATERNITE</div>
-    <div class="card-description">
-      공연과 배우, 좌석과 관람의 기록
-    </div>
-    <span class="card-link">VIEW ARCHIVE →</span>
-  </div>
-</a>
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 004</div>
+        <div class="card-title">프라테르니테</div>
+        <div class="card-english">FRATERNITE</div>
+        <div class="card-period">2025.10.28. ~ 2026.01.18.</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
     <!-- 보이즈 인 더 밴드 -->
 
-<a class="work-card"
-   href="https://docs.google.com/spreadsheets/d/1q16zNcLmkI4eUggtgdTc8RKvfEqUH6CMyi8oG1tnLSg/edit?gid=0#gid=0"
-   target="_blank"
-   rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://docs.google.com/spreadsheets/d/1q16zNcLmkI4eUggtgdTc8RKvfEqUH6CMyi8oG1tnLSg/edit?gid=0#gid=0"
+       target="_blank"
+       rel="noopener noreferrer">
 
-  <div class="cover boys-cover">
-    <img src="boys-in-the-band-poster.png" alt="보이즈 인 더 밴드 공연 포스터">
-  </div>
+      <div class="cover boys-cover">
+        <img src="boys-in-the-band-poster.png" alt="보이즈 인 더 밴드 공연 포스터">
+      </div>
 
-  <div class="card-info">
-    <div class="card-number">COLLECTION · 003</div>
-    <div class="card-title">보이즈 인 더 밴드</div>
-    <div class="card-english">BOYS IN THE BAND</div>
-    <div class="card-description">
-      공연과 배우, 좌석과 관람의 기록
-    </div>
-    <span class="card-link">VIEW ARCHIVE →</span>
-  </div>
-</a>
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 003</div>
+        <div class="card-title">보이즈 인 더 밴드</div>
+        <div class="card-english">BOYS IN THE BAND</div>
+        <div class="card-period">2025.08.27. ~ 2025.11.23.</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
     <!-- 등등곡 -->
 
-<a class="work-card"
-   href="https://docs.google.com/spreadsheets/d/16Ig1HYrLoN1uPHuTktPBp5PD5hnPzmzGB7R2t7RyZeU/edit?gid=0#gid=0"
-   target="_blank"
-   rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://docs.google.com/spreadsheets/d/16Ig1HYrLoN1uPHuTktPBp5PD5hnPzmzGB7R2t7RyZeU/edit?gid=0#gid=0"
+       target="_blank"
+       rel="noopener noreferrer">
 
-  <div class="cover deungdeung-gok-cover">
-    <img src="deungdeung-gok-poster.png" alt="등등곡 공연 포스터">
-  </div>
+      <div class="cover deungdeung-gok-cover">
+        <img src="deungdeung-gok-poster.png" alt="등등곡 공연 포스터">
+      </div>
 
-  <div class="card-info">
-    <div class="card-number">COLLECTION · 002</div>
-    <div class="card-title">등등곡</div>
-    <div class="card-english">DEUNGDEUNG-GOK</div>
-    <div class="card-description">
-      공연과 배우, 좌석과 관람의 기록
-    </div>
-    <span class="card-link">VIEW ARCHIVE →</span>
-  </div>
-</a>
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 002</div>
+        <div class="card-title">등등곡</div>
+        <div class="card-english">DEUNGDEUNG-GOK</div>
+        <div class="card-period">2025.06.24. ~ 2025.09.14.</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
     <!-- 민들레피리 -->
 
-<a class="work-card"
-   href="https://docs.google.com/spreadsheets/d/1v3JdyL2elRXlg6w6zVZET7VkHXq5UoO-/edit?gid=2052774080#gid=2052774080"
-   target="_blank"
-   rel="noopener noreferrer">
+    <a class="work-card"
+       href="https://docs.google.com/spreadsheets/d/1v3JdyL2elRXlg6w6zVZET7VkHXq5UoO-/edit?gid=2052774080#gid=2052774080"
+       target="_blank"
+       rel="noopener noreferrer">
 
-  <div class="cover dandelion-flute-cover">
-    <img src="dandelion-flute-poster.png" alt="민들레피리 공연 포스터">
-  </div>
+      <div class="cover dandelion-flute-cover">
+        <img src="dandelion-flute-poster.png" alt="민들레피리 공연 포스터">
+      </div>
 
-  <div class="card-info">
-    <div class="card-number">COLLECTION · 001</div>
-    <div class="card-title">민들레피리</div>
-    <div class="card-english">DANDELION FLUTE</div>
-    <div class="card-description">
-      공연과 배우, 좌석과 관람의 기록
-    </div>
-    <span class="card-link">VIEW ARCHIVE →</span>
-  </div>
-</a>
+      <div class="card-info">
+        <div class="card-number">COLLECTION · 001</div>
+        <div class="card-title">민들레피리</div>
+        <div class="card-english">DANDELION FLUTE</div>
+        <div class="card-period">2025.06.15. ~ 2025.09.07.</div>
+        <div class="card-description">
+          공연과 배우, 좌석과 관람의 기록
+        </div>
+        <span class="card-link">VIEW ARCHIVE →</span>
+      </div>
+
+    </a>
+
   </div>
 </section>
 
